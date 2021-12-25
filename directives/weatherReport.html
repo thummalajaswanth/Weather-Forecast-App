@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+        <h2>{{weatherResult.location.name}},
+            {{weatherResult.location.region}}, {{weatherResult.location.country}}</h2>
+    </div>
+    <div class="card-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="display-2">{{weatherResult.current.temp_c}}°C</h1>
+                            <img ng-src="{{weatherResult.current.condition.icon}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {{weatherResult.current.condition.text}} <br><br><br>
+                            Humidity: {{weatherResult.current.humidity}}% <br><br><br>
+                            Wind: {{weatherResult.current.wind_kph}} km/h
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
